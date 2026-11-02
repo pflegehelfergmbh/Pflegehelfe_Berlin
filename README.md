@@ -52,3 +52,8 @@ Interne Links öffnen im selben Tab. Nur externe HTTP(S)-Links zu fremden Domain
 - Auf allen Sprachversionen stehen kanonische URLs pro Sprachseite, wechselseitige `hreflang`-Verweise (de, ru, en, x-default) und das zugehörige `inLanguage` im WebPage-Schema.
 - Das ursprüngliche Design, die genehmigte Oma/Katze-Illustration, Kontaktdaten und alle `noindex`-Anweisungen bleiben erhalten.
 - Sprachversionen von Impressum und Datenschutz sind Übersetzungen vorläufiger Texte; finale rechtliche Prüfung vor Freigabe erforderlich.
+
+## Markenfarben und Logo (02.11.2026)
+- Freigegebene Palette: Tannengrün `#194E2E`, Salbeigrün `#7FA07D`, Hellgrün `#B3C790`, Gold `#D59B60`, Elfenbein `#F7F7F0`, Textgrün `#25362E`.
+- Das neue grüne Firmenlogo mit Haus/Pflegefiguren/Blättern ersetzt die bisherige Oma-mit-Katze-Heroillustration auf DE/RU/EN Startseiten. Asset: `assets/malaika-logo-green.webp` (optimierte WebP-Grafik aus dem freigegebenen Originalbild).
+- Die Website verwendet ein zentrales Stylesheet für alle Sprachvarianten. Keine Tracking-Skripte, `noindex` bleibt bestehen.
