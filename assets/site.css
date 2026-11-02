@@ -102,3 +102,24 @@ body{background:var(--cream);font-size:18px;line-height:1.7}
 .service-area-contact p{max-width:860px}
 @media(max-width:950px){.service-area-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.service-area-feature{padding:26px 20px;margin-bottom:55px}.service-area-list{grid-template-columns:1fr;gap:9px}.service-area-list li{min-height:52px;font-size:18px}.service-area-actions{align-items:stretch}.service-area-actions .button{width:100%;font-size:17px;text-align:center}.service-area-actions p{font-size:16px}}
+
+/* Confirmed multilingual team and transparent financing blocks, 2026-11-02 */
+.language-feature{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(270px,.7fr);align-items:center;gap:36px;padding:clamp(30px,4vw,55px);background:#fff;border:1px solid var(--line);border-radius:12px;margin:42px 0 8px}
+.language-feature h2{font-size:clamp(30px,3.7vw,45px);margin:0 0 18px}
+.language-feature p:not(.eyebrow){font-size:18px;color:#50454A;line-height:1.7;margin:0}
+.language-tags{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0;margin:0}
+.language-tags li{min-height:55px;padding:11px 14px;background:#FFF4F6;border:1px solid #E7D9DD;border-radius:6px;color:var(--wine);font-size:18px;font-weight:750;display:flex;align-items:center;justify-content:center;text-align:center}
+.language-tags-compact{display:flex;flex-wrap:wrap;gap:10px;max-width:800px;margin:20px 0}
+.language-tags-compact li{min-height:47px;padding:9px 19px;flex:0 1 auto}
+.billing-section{background:#FFFDFD;border:1px solid var(--line);border-radius:12px;padding:clamp(28px,4vw,55px);margin:30px 0 55px}
+.billing-section h2{font-size:clamp(30px,3.5vw,44px);margin:0 0 24px}
+.billing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.billing-grid article{background:#FFF5F7;padding:28px;border-radius:8px;border:1px solid #E9D5DC}
+.billing-grid h3{font-size:clamp(23px,2.2vw,29px);margin-bottom:15px}
+.billing-grid p,.billing-help{font-size:18px;color:#51434A;line-height:1.75}
+.billing-grid p{margin:0}
+.billing-help{margin:26px 0 10px}
+.billing-source{color:#5B4D53;font-size:15px;line-height:1.6}
+.billing-source a{font-size:15px;font-weight:650}
+@media(max-width:800px){.language-feature{grid-template-columns:1fr;gap:25px}.billing-grid{grid-template-columns:1fr}}
+@media(max-width:500px){.language-feature{padding:27px 20px}.language-tags{gap:8px}.language-tags li{font-size:17px;padding:10px 7px;min-height:54px}.language-tags-compact li{padding:9px 14px}.billing-section{padding:26px 19px}.billing-grid article{padding:22px}}
