@@ -1,0 +1,4 @@
+# Entwicklungsphase: Crawling ist erlaubt, aber alle HTML-Seiten enthalten noindex.
+# robots.txt blockiert noindex-Seiten absichtlich nicht.
+User-agent: *
+Allow: /
