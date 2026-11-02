@@ -45,3 +45,10 @@ Interne Links öffnen im selben Tab. Nur externe HTTP(S)-Links zu fremden Domain
 - `scripts/check_multilingual.py` prüft die Parität der DE/RU-Routen, Metadaten, JSON-LD, die Existenz von Bilddateien/CSS und das weiterhin geltende `noindex`.
 - Keine neuen Drittanbieterskripte, Statistik, Cookies oder Formulare. Der vorläufige Datenschutz-Hinweis bleibt in beiden Sprachen ausdrücklich als unvollständig gekennzeichnet.
 - Russische Texte sind für Angehörige und pflegebedürftige Menschen in Berlin angepasst, während deutsche Rechtsbegriffe (Pflegegrad, Krankenkasse etc.) zur Orientierung erhalten bleiben.
+
+## Sprachversionen (02.11.2026)
+- Deutsch: `/` · Russisch: `/ru/` · Englisch (British English): `/en/`; jeweils 17 korrespondierende HTML-Seiten.
+- DE, RU und EN verlinken denselben Themenpfad sprachspezifisch, jeweils im selben Tab. Sprache wird per HTML-Links (ohne JavaScript) gewechselt.
+- Auf allen Sprachversionen stehen kanonische URLs pro Sprachseite, wechselseitige `hreflang`-Verweise (de, ru, en, x-default) und das zugehörige `inLanguage` im WebPage-Schema.
+- Das ursprüngliche Design, die genehmigte Oma/Katze-Illustration, Kontaktdaten und alle `noindex`-Anweisungen bleiben erhalten.
+- Sprachversionen von Impressum und Datenschutz sind Übersetzungen vorläufiger Texte; finale rechtliche Prüfung vor Freigabe erforderlich.
