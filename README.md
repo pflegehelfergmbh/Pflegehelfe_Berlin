@@ -15,3 +15,8 @@ Statischer, responsiver HTML-first-Auftritt in der Farbpalette Burgundy & Blush.
 5. Daten im Impressum: Handelsregisterauszug vom 02.11.2026 (HRB 289768 B); Telefon und Bürozeiten aus der vorhandenen Malaika-Broschüre. Andere Dienstleistungsbroschüren sind keine Belege für Malaikas Leistungsumfang.
 
 Keine Gesundheitsdaten, internen Unterlagen, Schlüssel oder Zugänge in diesem öffentlichen Repository speichern.
+
+## Hinweis zu GitHub Pages und Indexierung
+Alle HTML-Seiten enthalten `noindex`. Eine Datei `robots.txt` im Projekt-Unterpfad ersetzt nicht die `robots.txt` der Host-Wurzel `pflegehelfergmbh.github.io`. Die HTML-Meta-Anweisung ist für die temporäre Nichtindexierung entscheidend. GitHub Pages muss separat in den Repository-Einstellungen aktiviert und der öffentlich abrufbare Stand nach erfolgreicher Bereitstellung überprüft werden.
+
+Dem Publishing-Link-Standard folgend öffnen normale HTML-Weblinks in einer neuen Registerkarte; Telefon- und E-Mail-Verknüpfungen sind ausgenommen. Die abschließende Live-QA bleibt offen.
