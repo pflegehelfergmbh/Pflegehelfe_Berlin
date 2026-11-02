@@ -24,3 +24,9 @@ Dem Publishing-Link-Standard folgend öffnen normale HTML-Weblinks in einer neue
 
 ## Navigationsregel
 Interne Links öffnen im selben Tab. Nur externe HTTP(S)-Links zu fremden Domains öffnen mit `target="_blank" rel="noopener"` in einem neuen Tab. Telefon- und E-Mail-Links bleiben im selben Kontext.
+
+## Dauerhafter Navigationsstandard (ab 02.11.2026)
+- Alle Links innerhalb der Website (einschließlich **Home**, Logo, Navigation und Footer) bleiben im aktuellen Tab: `target="_self"` oder kein target.
+- Nur externe HTTP(S)-Links zu anderen Domains öffnen im neuen Tab: `target="_blank" rel="noopener"`.
+- E-Mail-, Telefon- und interne Sprungmarken bleiben ohne neue Tabs.
+- `scripts/check_navigation.py` wird beim Push automatisch per GitHub Actions geprüft und schützt alle HTML-Seiten vor dieser Regression; `noindex` bleibt bis zur Freigabe der Website bestehen.

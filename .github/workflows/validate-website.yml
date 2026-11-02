@@ -1,0 +1,14 @@
+name: Validate website navigation and noindex
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check navigation, relative links, and staging index policy
+        run: python3 scripts/check_navigation.py
