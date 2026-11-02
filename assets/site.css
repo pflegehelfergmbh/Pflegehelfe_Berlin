@@ -84,3 +84,21 @@ body{background:var(--cream);font-size:18px;line-height:1.7}
 .hero-art .hero-illustration{display:block;width:min(100%,450px);height:auto;aspect-ratio:1/1;object-fit:contain;flex-shrink:0;border-radius:50%}
 .hero-art .ai-credit{align-self:flex-end;color:#754f5e;background:rgba(255,255,255,.8);border-radius:3px;padding:2px 6px;font-size:11px;line-height:1.5;margin-top:6px}
 @media(max-width:650px){.hero-art .hero-illustration{width:min(100%,400px)}.hero-art .ai-credit{font-size:10px}}
+
+/* Confirmed Berlin service areas – accessible static HTML and mobile-first layout. */
+.service-area-feature{padding:clamp(34px,4.6vw,60px);margin:0 0 68px;background:#FFFAFA;border:1px solid #E7D9DD;border-radius:12px;box-shadow:0 10px 34px rgba(94,36,57,.035)}
+.service-area-feature h2{max-width:800px;font-size:clamp(31px,3.7vw,47px);margin:0 0 18px}
+.service-area-feature p{font-size:18px;color:#55494E;line-height:1.75;max-width:900px}
+.service-area-feature .eyebrow{color:#833046;font-size:14px;margin-bottom:14px}
+.service-area-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));list-style:none;margin:26px 0;padding:0;gap:12px}
+.service-area-list li{display:flex;align-items:center;background:#FFF4F6;border:1px solid #E7D9DD;border-radius:6px;min-height:56px;padding:12px 16px;color:#62263A;font-size:18px;font-weight:700;line-height:1.4}
+.service-area-list li::before{content:"";width:8px;height:8px;flex:0 0 8px;background:#B74D62;border-radius:50%;margin-right:12px}
+.service-area-actions{display:flex;align-items:center;flex-wrap:wrap;gap:13px 24px;margin-top:24px}
+.service-area-actions p{margin:0;font-size:17px}
+.service-area-actions .button{min-height:56px}
+.service-area-detail{margin:40px 0 40px}
+.service-area-detail>p:last-child{margin-bottom:0}
+.service-area-contact{max-width:100%;padding-bottom:35px}
+.service-area-contact p{max-width:860px}
+@media(max-width:950px){.service-area-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.service-area-feature{padding:26px 20px;margin-bottom:55px}.service-area-list{grid-template-columns:1fr;gap:9px}.service-area-list li{min-height:52px;font-size:18px}.service-area-actions{align-items:stretch}.service-area-actions .button{width:100%;font-size:17px;text-align:center}.service-area-actions p{font-size:16px}}
