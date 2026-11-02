@@ -28,7 +28,7 @@ Interne Links öffnen im selben Tab. Nur externe HTTP(S)-Links zu fremden Domain
 - Alle Links innerhalb der Website (einschließlich **Home**, Logo, Navigation und Footer) bleiben im aktuellen Tab: `target="_self"` oder kein target.
 - Nur externe HTTP(S)-Links zu anderen Domains öffnen im neuen Tab: `target="_blank" rel="noopener"`.
 - E-Mail-, Telefon- und interne Sprungmarken bleiben ohne neue Tabs.
-- `scripts/check_navigation.py` wird beim Push automatisch per GitHub Actions geprüft und schützt alle HTML-Seiten vor dieser Regression; `noindex` bleibt bis zur Freigabe der Website bestehen.
+- `scripts/check_navigation.py` und `scripts/check_multilingual.py` werden bei jedem Push per GitHub Actions ausgeführt und prüfen alle drei Sprachen, interne/externe Links, relative Pfade, Assets, Canonicals, hreflang, Schema und noindex.
 
 ## Redaktionelle Strukturentscheidung vom 02.11.2026
 - Keine identischen FAQ-Blöcke auf unterschiedlichen Seiten. Fragen und Antworten passen jeweils zu Suchintention und Seitenthema.
