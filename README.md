@@ -37,3 +37,11 @@ Interne Links öffnen im selben Tab. Nur externe HTTP(S)-Links zu fremden Domain
 - Keine internen Produktionshinweise, Recherchehinweise oder künstlichen Vertrauensbehauptungen im Kunden-Fließtext. Rechtlich nötige transparente Hinweise und Entwurfsstatus bleiben sichtbar.
 - Kundenseitig bestätigte Merkmale: ambulante Pflege, mobile Mitarbeitende, Einsatzgebiete in sieben benannten Berliner Zonen, Sprachen Deutsch/Russisch/Englisch/Französisch.
 - Verbindliche Kostenübernahme der Pflege- oder Krankenkasse wird nie pauschal zugesagt.
+
+## Zweisprachige Website: DE / RU (02.11.2026)
+- Vollständiges DE/RU-Seitenpaar für 17 Seiten: Deutsche URLs im Root, russische URLs unter `/ru/` mit derselben Seitenstruktur.
+- Sichtbarer Sprachwechsler auf jeder Seite. Interne Links bleiben im selben Tab, externe Links öffnen in einem neuen Tab.
+- Echtes `lang`-Attribut, sprachspezifische Canonicals, gegenseitige `hreflang`-Links (de, ru, x-default) und sprachspezifische `WebPage.inLanguage`-Eigenschaften.
+- `scripts/check_multilingual.py` prüft die Parität der DE/RU-Routen, Metadaten, JSON-LD, die Existenz von Bilddateien/CSS und das weiterhin geltende `noindex`.
+- Keine neuen Drittanbieterskripte, Statistik, Cookies oder Formulare. Der vorläufige Datenschutz-Hinweis bleibt in beiden Sprachen ausdrücklich als unvollständig gekennzeichnet.
+- Russische Texte sind für Angehörige und pflegebedürftige Menschen in Berlin angepasst, während deutsche Rechtsbegriffe (Pflegegrad, Krankenkasse etc.) zur Orientierung erhalten bleiben.
