@@ -11,7 +11,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://pflegehelfergmbh.github.io/Pflegehelfe_Berlin/"
-LANGUAGES = {"de": "de-DE", "ru": "ru-RU", "en": "en-GB"}
+LANGUAGES = {"de": "de-DE", "ru": "ru-RU", "en": "en-GB", "fr": "fr-FR"}
 errors = []
 
 
@@ -57,12 +57,14 @@ paths = sorted(ROOT.rglob("*.html"))
 route_sets = {code: set() for code in LANGUAGES}
 for path in paths:
     rel = path.relative_to(ROOT).as_posix()
-    code = rel.split("/", 1)[0] if rel.startswith(("ru/", "en/")) else "de"
+    code = rel.split("/", 1)[0] if rel.startswith(("ru/", "en/", "fr/")) else "de"
     route = rel[len(code)+1:] if code != "de" else rel
     route_sets[code].add(route)
 
 if not route_sets["de"]:
     errors.append("No German pages")
+if route_sets["fr"] != {"index.html"}:
+    errors.append(f"French landing page expected, got routes {sorted(route_sets['fr'])}")
 for code in ("ru", "en"):
     if route_sets[code] != route_sets["de"]:
         errors.append(
@@ -73,10 +75,13 @@ for code in ("ru", "en"):
 
 for path in paths:
     rel = path.relative_to(ROOT).as_posix()
-    code = rel.split("/", 1)[0] if rel.startswith(("ru/", "en/")) else "de"
+    code = rel.split("/", 1)[0] if rel.startswith(("ru/", "en/", "fr/")) else "de"
     route = rel[len(code)+1:] if code != "de" else rel
     suffix = route.removesuffix("index.html")
-    urls = {k: BASE + (k + "/" if k != "de" else "") + suffix for k in LANGUAGES}
+    is_new_landing = route == "index.html"
+    root_url = "https://pflegehelfer.gmbh/" if is_new_landing else BASE
+    active_languages = LANGUAGES if is_new_landing else {k: v for k, v in LANGUAGES.items() if k != "fr"}
+    urls = {k: root_url + (k + "/" if k != "de" else "") + suffix for k in active_languages}
     own_url = urls[code]
 
     parser = Page()
@@ -135,7 +140,7 @@ if errors:
         print(" -", error)
     sys.exit(1)
 print(
-    "Trilingual QA passed: "
+    "Multilingual QA passed: "
     + ", ".join(f"{len(route_sets[k])} {k.upper()}" for k in LANGUAGES)
     + " pages; canonical, hreflang, noindex, shared assets and JSON-LD validated."
 )

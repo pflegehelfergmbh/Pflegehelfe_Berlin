@@ -13,7 +13,7 @@ from urllib.parse import urlparse, unquote
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-OWN_HOSTS = {"pflegehelfergmbh.github.io", "pflegedienst-malaika.de", "www.pflegedienst-malaika.de"}
+OWN_HOSTS = {"pflegehelfer.gmbh", "www.pflegehelfer.gmbh", "pflegehelfergmbh.github.io", "pflegedienst-malaika.de", "www.pflegedienst-malaika.de"}
 
 class Links(HTMLParser):
     def __init__(self):
