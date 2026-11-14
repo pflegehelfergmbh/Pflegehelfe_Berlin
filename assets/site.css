@@ -156,20 +156,3 @@ body{background:var(--malaika-ivory);color:var(--malaika-text)}
 @media(max-width:900px){.hero-art{min-height:0}}
 @media(max-width:650px){.hero-art{min-height:0;max-width:460px;padding:12px;border-radius:14px}.hero-art .hero-illustration{width:100%;aspect-ratio:4/3}}
 @media(max-width:380px){.header-inner{gap:4px}.brand-sub{letter-spacing:.08em}}
-
-/* Header hamburger navigation. Footer navigation is preserved unchanged. */
-.site-header{z-index:120}
-.main-nav{display:none}
-.mobile-menu{display:block;position:relative;order:3;flex-shrink:0}
-.header-tools .header-call{order:2}
-.mobile-menu summary{width:52px;min-width:52px;min-height:52px;height:52px;padding:0;gap:0;display:flex;align-items:center;justify-content:center;border:1px solid var(--malaika-line,#D7E2D5);border-radius:11px;background:#fff;color:var(--malaika-forest,#194E2E);font-size:0;box-shadow:0 2px 10px rgba(25,78,46,.05);cursor:pointer;list-style:none}
-.mobile-menu summary::-webkit-details-marker{display:none}
-.mobile-menu summary::marker{content:""}
-.mobile-menu summary span{display:inline-block;font-size:30px;line-height:1;transform:translateY(-1px)}
-.mobile-menu[open] summary{background:#edf4e9;border-color:var(--malaika-forest,#194E2E)}
-.mobile-menu nav{position:absolute;top:calc(100% + 10px);right:0;left:auto;z-index:150;width:min(355px,calc(100vw - 32px));max-height:min(75vh,650px);overflow-y:auto;background:#fff;box-shadow:0 14px 40px rgba(25,78,46,.18);border:1px solid var(--malaika-line,#D7E2D5);border-radius:13px;padding:10px 12px}
-.mobile-menu nav a{display:block;padding:13px 12px;min-height:48px;color:var(--malaika-forest,#194E2E);font-size:17px;line-height:1.4;text-decoration:none;border-bottom:1px solid #e2ece0}
-.mobile-menu nav a:focus-visible,.mobile-menu nav a:hover{background:#edf4e9;border-radius:5px}
-.mobile-menu nav a:last-child{border-bottom:0}
-@media(max-width:760px){.site-header{z-index:120}.mobile-menu summary{min-width:46px;width:46px;height:46px;min-height:46px;padding:0}.mobile-menu summary span{font-size:28px}.header-tools{gap:7px}.header-inner{flex-wrap:nowrap}}
-@media(max-width:380px){.mobile-menu summary{min-width:44px;width:44px;height:44px;min-height:44px;padding:0}.mobile-menu summary span{font-size:26px}.brand-name{font-size:21px}.brand-sub{font-size:8px}}
