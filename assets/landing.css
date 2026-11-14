@@ -4,3 +4,9 @@
 .site-header .header-inner>a:first-child::after{content:"MALAIKA";font-weight:900;font-size:clamp(24px,2.8vw,34px);line-height:1;letter-spacing:.065em;color:var(--deep)}
 .site-header .logo{width:108px;max-width:108px;height:100px;object-fit:contain}
 @media(max-width:680px){.site-header .logo{width:77px;max-width:77px;height:75px}.site-header .header-inner>a:first-child::after{font-size:25px}}
+
+/* Restored sections from the original home page */
+.family-panel{display:grid;grid-template-columns:1.1fr .8fr;gap:28px;align-items:center;background:var(--pale);border-radius:24px;padding:34px}
+.family-panel .button{margin-top:12px}.family-quote{font-size:clamp(22px,2.7vw,31px);line-height:1.35;background:#fff;border-radius:18px;padding:28px;color:var(--deep)}.family-quote p{margin:0}.family-quote strong{display:block}
+.faq-list{max-width:880px;margin:auto;display:grid;gap:12px}.faq-list details{background:#fff;border:1px solid var(--stroke);border-radius:16px;padding:18px 20px}.faq-list summary{cursor:pointer;color:var(--deep);font-size:clamp(18px,2.2vw,21px);font-weight:800}.faq-list details[open] summary{margin-bottom:12px}.faq-list details p{font-size:17px;margin:0}
+@media(max-width:680px){.family-panel{grid-template-columns:1fr;padding:22px}.family-quote{padding:22px}.faq-list details{padding:16px}}
