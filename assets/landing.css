@@ -10,3 +10,32 @@
 .family-panel .button{margin-top:12px}.family-quote{font-size:clamp(22px,2.7vw,31px);line-height:1.35;background:#fff;border-radius:18px;padding:28px;color:var(--deep)}.family-quote p{margin:0}.family-quote strong{display:block}
 .faq-list{max-width:880px;margin:auto;display:grid;gap:12px}.faq-list details{background:#fff;border:1px solid var(--stroke);border-radius:16px;padding:18px 20px}.faq-list summary{cursor:pointer;color:var(--deep);font-size:clamp(18px,2.2vw,21px);font-weight:800}.faq-list details[open] summary{margin-bottom:12px}.faq-list details p{font-size:17px;margin:0}
 @media(max-width:680px){.family-panel{grid-template-columns:1fr;padding:22px}.family-quote{padding:22px}.faq-list details{padding:16px}}
+
+/* Top-right expandable page menu — duplicates, but does not replace, footer links. */
+.site-header{position:relative;z-index:90}
+.site-header .header-inner{position:relative;padding-right:94px}
+.site-drawer{position:absolute;top:50%;right:24px;transform:translateY(-50%);z-index:120}
+.site-drawer summary{display:flex;align-items:center;justify-content:center;width:54px;height:54px;min-width:54px;cursor:pointer;list-style:none;border:2px solid #cadcc9;border-radius:14px;background:#fff;color:var(--deep);box-shadow:0 3px 12px rgba(6,69,30,.07)}
+.site-drawer summary::-webkit-details-marker{display:none}
+.site-drawer summary::marker{content:""}
+.site-drawer .hamburger-bars,.site-drawer .hamburger-bars::before,.site-drawer .hamburger-bars::after{display:block;height:3px;width:25px;border-radius:3px;background:var(--deep);position:relative;content:""}
+.site-drawer .hamburger-bars::before{position:absolute;top:-8px;left:0}
+.site-drawer .hamburger-bars::after{position:absolute;top:8px;left:0}
+.site-drawer[open] summary{background:var(--pale);border-color:var(--green)}
+.site-drawer nav{position:absolute;right:0;top:calc(100% + 9px);width:min(350px,calc(100vw - 40px));max-height:min(74vh,650px);overflow-y:auto;background:#fff;border:1px solid #d1e3cf;border-radius:18px;padding:10px 13px;box-shadow:0 18px 40px rgba(6,69,30,.21)}
+.site-drawer nav a{display:block;padding:12px 11px;min-height:45px;font-size:17px;line-height:1.35;font-weight:700;color:var(--deep);text-decoration:none;border-bottom:1px solid #e4eee3}
+.site-drawer nav a:last-child{border-bottom:0}
+.site-drawer nav a:hover,.site-drawer nav a:focus-visible{background:var(--pale);border-radius:7px}
+@media(max-width:680px){
+ .site-header .header-inner{padding-right:24px}
+ .site-drawer{top:21px;right:24px;transform:none}
+ .site-drawer summary{width:49px;height:49px;min-width:49px;border-radius:12px}
+ .site-header .header-inner>a:first-child{margin-right:55px}
+}
+@media(max-width:360px){
+ .site-header .logo{width:62px;max-width:62px;height:65px}
+ .site-header .header-inner>a:first-child{gap:8px;margin-right:52px}
+ .site-header .header-inner>a:first-child::after{font-size:19px;letter-spacing:.025em}
+ .site-drawer summary{width:45px;height:45px;min-width:45px}
+ .site-drawer .hamburger-bars,.site-drawer .hamburger-bars::before,.site-drawer .hamburger-bars::after{width:22px}
+}
